@@ -1,0 +1,17 @@
+---
+import SkillsCategory from "./SkillsCategory.astro";
+import { skills } from "../content/data/db";
+---
+<div id="home-skills" class="my-6 p-12 rounded bg-gray-700 mx-32">
+    <h1 class="underline text-white font-extrabold text-3xl">Habilidades</h1>
+    <div class="grid grid-cols-2" id="skills">
+        {
+            Object.entries(skills).map(([category, skills]) =>
+                <SkillsCategory
+                    category={ category }
+                    skills={ skills }
+                />
+            )
+        }
+    </div>
+</div>

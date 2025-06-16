@@ -1,0 +1,44 @@
+---
+import "../../styles/global.css";
+import Layout from "../../layouts/Layout.astro";
+import type { Project } from "../../interfaces/Interface";
+import { projects } from "../../content/data/db";
+import TecnologyLabel from "../../components/TecnologyLabel.astro";
+import { Image } from "astro:assets";
+
+export function getStaticPaths() {
+    return projects.map((project: Project) => ({
+        params: { slug: project.slug },
+        props: { project }
+    }))
+};
+
+interface Props {
+    project: Project;
+}
+
+const { project } = Astro.props as Props;
+---
+<Layout title={`Jose Bautista - ${project.name}`}>
+    <div style="display:flex;flex-direction:column;justify-content:center;" class="shadow-lg rounded-lg mx-32 bg-gray-600 mt-8 p-8">
+        <a href={`${project.repository}`} class="text-white text-5xl font-extrabold underline ml-6 mb-4">{ project.name }</a>
+        <p class="text-white font-bold text-xl bg-gray-700 p-1 rounded ml-8 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis neque repellat ea. Et inventore fuga maiores quo nostrum? Consectetur porro cum ab cupiditate voluptatibus sunt sapiente commodi eaque, quo ex!</p>
+        <div class="mx-8 flex-col" style="display:flex;justify-content:center;">
+            <a href={`${project.repository}`} style="display:flex;justify-content:center;">
+                <Image
+                    src={`/images/${project.img}`}
+                    alt=""
+                    width={-1}
+                    height={-1}
+                />
+            </a>
+            <div class="flex justify-end mt-4">
+                {
+                    project.technologies.map(technolgy =>
+                        <TecnologyLabel name={ technolgy } />
+                    )
+                }
+            </div>
+        </div>
+    </div>
+</Layout>

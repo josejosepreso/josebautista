@@ -1,0 +1,27 @@
+---
+import "../styles/global.css";
+import type { Project } from '../interfaces/Interface';
+import TecnologyLabel from "./TecnologyLabel.astro";
+interface Props {
+    slug: string;
+    name: string;
+    description: string;
+    technologies: string[];
+}
+const { slug, name, description, technologies } = Astro.props as Props;
+---
+<a class="project-card" href={`/projects/${slug}`}>
+    <div class="bg-gray-600 rounded-md mt-6 p-12 shadow-lg hover:bg-gray-700">
+        <h1 class="underline font-extrabold text-white text-4xl">{ name }</h1>
+        <div class="project-content flex-col mt-4">
+            <p class="text-white font-bold text-xl">{ description }</p>
+            <div class="mt-4 flex">
+                {
+                    technologies.map(technolgy =>
+                        <TecnologyLabel name={ technolgy } />
+                    )
+                }
+            </div>
+        </div>
+    </div>
+</a>

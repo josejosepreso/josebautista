@@ -1,0 +1,75 @@
+@import "tailwindcss";
+
+html {
+    scroll-behavior: smooth;
+}
+
+a#contact {
+    border:2px solid white;
+    padding:0.5em 1em;
+    border-radius:5px;    
+    margin-left:2em;
+}
+
+img {
+    object-fit:cover;
+}
+
+img#me {
+    border-radius: 100%;
+    width:20em;
+    max-width:20em;
+    height:20em;
+    max-height:20em;
+    border: 0px solid black;
+    margin:0 3em;
+}
+
+li > a {
+    padding:0.4em;
+    transition: ease-in 0.2s;
+}
+
+li > a:hover {
+    background-color: white;
+    color:black;
+    border-radius:5px;
+}
+
+div#navbar {
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:sticky;
+    top:0;
+    transition:linear 0.1s;
+    opacity:0.9;
+}
+
+div.section:hover {
+    margin-top: -10px;
+}
+
+a.home-project {
+    min-height: 20em;
+    padding-top: 0.5em;
+    transition: linear 0.3s;
+}
+
+a.home-project:hover {
+    padding-top: 0;
+    padding-bottom: 0.5em;
+}
+
+a.home-project:hover::after {
+    padding-top: 0.5em;
+}
+
+a.home-project > div{
+    min-height: 8em;
+}
+
+img.cardImg {
+    width:100%;
+    max-height:12em;
+}
