@@ -5,7 +5,6 @@ html {
 }
 
 a#contact {
-    border:2px solid white;
     padding:0.5em 1em;
     border-radius:5px;    
     margin-left:2em;
@@ -17,10 +16,10 @@ img {
 
 img#me {
     border-radius: 100%;
-    width:20em;
-    max-width:20em;
-    height:20em;
-    max-height:20em;
+    width:15em;
+    max-width:15em;
+    height:15em;
+    max-height:15em;
     border: 0px solid black;
     margin:0 3em;
 }
@@ -30,12 +29,6 @@ li > a {
     transition: ease-in 0.2s;
 }
 
-li > a:hover {
-    background-color: white;
-    color:black;
-    border-radius:5px;
-}
-
 div#navbar {
     display:flex;
     align-items:center;
@@ -43,7 +36,7 @@ div#navbar {
     position:sticky;
     top:0;
     transition:linear 0.1s;
-    opacity:0.9;
+    opacity:0.95;
 }
 
 div.section:hover {

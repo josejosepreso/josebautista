@@ -4,9 +4,9 @@ import Layout from "../layouts/Layout.astro";
 import { projects } from "../content/data/db";
 import ProjectSection from "../components/ProjectSection.astro";
 ---
-<Layout title="Jose Bautista - Proyectos">
+<Layout title="Jose Bautista - Proyectos" page={1}>
     <main class="mx-32 my-12">
-        <h1 class="underline font-extrabold text-5xl text-orange-900">Mis proyectos</h1>
+        <h1 class="underline font-extrabold text-4xl text-blue-500">Mis proyectos</h1>
         {
             projects.map(project =>
                 <ProjectSection

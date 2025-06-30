@@ -8,7 +8,7 @@ export const skills: Skills = {
 		{ name: "React", level: 40 },
     ],
     Backend: [
-		{ name: "SpringBoot", level: 60 },
+		{ name: "Spring Boot", level: 60 },
 		{ name: "PHP", level: 50 },
 		{ name: "NodeJS", level: 50 },
     ],
@@ -24,7 +24,7 @@ export const projects: Project[] = [
 		slug: "etl",
 		name: "ETL",
 		description: "Aplicacion de escritorio para realizar operaciones ETL",
-		img: "etl.png",
+		imgs: ["etl0.png", "etl1.png", "etl2.png", "etl3.png"],
 		technologies: ["Python", "GTK3", "Oracle"],
 		repository: "https://github.com/josejosepreso/ETL"
 	},
@@ -32,7 +32,7 @@ export const projects: Project[] = [
 		slug: "linkedin",
 		name: "LinkedIn",
 		description: "Clon funcional de LinkedIn",
-		img: "linkedin.png",
+		imgs: ["linkedin0.png", "linkedin1.png"],
 		technologies: ["HTML", "Bootstrap", "JavaScript", "Java"],
 		repository: "https://github.com/josejosepreso/LinkedIn"
 	},
@@ -40,7 +40,7 @@ export const projects: Project[] = [
 		slug: "pizza",
 		name: "ThePizzaLab",
 		description: "Sistema de un restaurante",
-		img: "pizza.png",
+		imgs: ["pizza0.png"],
 		technologies: ["Laravel", "Java", "MySQL", "Bootstrap"],
 		repository: "https://github.com/josejosepreso/ThePizzaLab-Front"
 	},
@@ -48,17 +48,13 @@ export const projects: Project[] = [
 		slug: "radar",
 		name: "radar",
 		description: "Herramienta para la creacion de diagramas de ara;a (radar charts)",
-		img: "radar.png",
+		imgs: ["radar0.png"],
 		technologies: ["Haskell", "Gloss"],
 		repository: "https://github.com/josejosepreso/radar"
 	},
 ]
 
 export const indexCards: CardIndexProps[] = [
-	{
-		title: "Sobre mi",
-		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-	},
 	{
 		title: "Sobre mi",
 		description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."

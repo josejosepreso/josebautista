@@ -3,23 +3,24 @@ import Navbar from "../components/Navbar.astro";
 
 interface Props {
 	title: string;
+	page?: number;
 }
 
-const { title } = Astro.props as Props;
+const { title, page } = Astro.props as Props;
 ---
 <html>
 	<head>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-		<title>{ title }</title
+		<title>{ title }</title>
 	</head>
-	<body class="bg-orange-100">
-		<Navbar />
+	<body class="bg-gray-100">
+		<Navbar page={ page } />
 		
 		<slot />
 
-		<footer class="bg-gray-700 shadow-sm mt-4 py-4 align-bottom">
+		<footer class="bg-gray-300 shadow-sm mt-4 py-4 align-bottom">
 			<div class="w-full mx-auto max-w-screen-xl p-4 flex items-center justify-center">
-				<span class="font-leading text-lg text-gray-200 sm:text-center">2025, Jose Bautista. Todos los derechos reservados</span>
+				<span class="font-leading text-md text-gray-800 sm:text-center">2025, Jose Bautista. Todos los derechos reservados</span>
 			</div>
 		</footer>
 		<script src="../scripts/navbar.js"></script>

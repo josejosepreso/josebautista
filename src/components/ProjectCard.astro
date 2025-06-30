@@ -10,15 +10,16 @@ interface Props {
 const { name, description, img_path, repository } = Astro.props as Props;
 
 ---
-<a class="home-project flex-col bg-gray-900 mr-4 mb-4" href={`${ repository }`}>
+<a class="home-project flex-col bg-gray-200 mr-4 mb-4" href={`${ repository }`}>
     <Image
+        class="rounded-lg"
         src={ `/images/${img_path}` }
         alt=""
         width={-1}
         height={-1}
     />
-    <div class="p-6 bg-gray-700 justify-items-center align-bottom">
-        <h3 class="font-extrabold text-white mb-4 text-4xl">{ name }</h3>
-        <p class="text-white font-bold">{ description }</p>
+    <div class="mt-1 p-6 bg-gray-300 justify-items-center align-bottom text-blue-800 rounded-lg">
+        <h3 class="font-extrabold mb-4 text-4xl">{ name }</h3>
+        <p class="font-semibold">{ description }</p>
     </div>
 </a>

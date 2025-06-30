@@ -6,8 +6,8 @@ interface Props {
 }
 const { category, skills } = Astro.props as Props;
 ---
-<div class="mt-4 mx-4 rounded text-2xl p-6 bg-orange-800">
-    <h2 class="underline text-2xl font-extrabold text-white">{ category }</h2>
+<div class="mt-4 mx-4 rounded text-2xl p-6 bg-gray-300">
+    <h2 class="underline text-2xl font-extrabold text-blue-700">{ category }</h2>
     <div class="skillscat">
         {
             skills
@@ -15,9 +15,9 @@ const { category, skills } = Astro.props as Props;
             .sort((a: Skill, b: Skill) => b.level - a.level)
             .map((skill: Skill) =>
                 <div style="display:flex;align-items:center;justify-content:space-between;">
-                    <p style="width:50%;" class="font-bold text-xl text-white">{ skill.name }</p>
+                    <p style="width:50%;" class="font-semibold text-xl text-blue-900">{ skill.name }</p>
                     <div class="rounded bg-white m-2" style="width:80%;">
-                        <div class="rounded bg-red-500" style={`width: ${skill.level <= 100 ? skill.level : 100}%;`}>
+                        <div class="rounded bg-blue-500" style={`width: ${skill.level <= 100 ? skill.level : 100}%;`}>
                             <p class="flex mx-4 font-extrabold text-xl text-white">{ skill.level }%</p>
                         </div>
                     </div>

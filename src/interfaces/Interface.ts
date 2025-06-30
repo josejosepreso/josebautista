@@ -11,7 +11,7 @@ export interface Project {
     slug: string;
     name: string;
     description: string;
-    img: string;
+    imgs: string[];
     technologies: string[];
     repository: string;
 }
