@@ -4,7 +4,7 @@ import Layout from "../../layouts/Layout.astro";
 import type { Project } from "../../interfaces/Interface";
 import { projects } from "../../content/data/db";
 import TecnologyLabel from "../../components/TecnologyLabel.astro";
-import Carousel from "../../components/react/Carouse.jsx";
+import Carousel from "../../components/react/Carousel.jsx";
 
 export function getStaticPaths() {
     return projects.map((project: Project) => ({
