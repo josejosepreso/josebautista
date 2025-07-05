@@ -5,12 +5,13 @@ interface Props {
     description: string;
     img_path: string;
     repository: string;
+    slug: string;
 }
 
-const { name, description, img_path, repository } = Astro.props as Props;
+const { name, description, img_path, repository, slug } = Astro.props as Props;
 
 ---
-<a class="home-project flex-col bg-gray-200 mr-4 mb-4" href={`${ repository }`}>
+<a class="home-project flex-col bg-gray-200 mr-4 mb-4" href={`/projects/${ slug }`}>
     <Image
         class="rounded-lg"
         src={ `/images/${img_path}` }
@@ -20,6 +21,6 @@ const { name, description, img_path, repository } = Astro.props as Props;
     />
     <div class="mt-1 p-6 bg-gray-300 justify-items-center align-bottom text-blue-800 rounded-lg">
         <h3 class="font-extrabold mb-4 text-4xl">{ name }</h3>
-        <p class="font-semibold">{ description }</p>
+        <p class="font-semibold">{ description.length > 100 ? description.substring(0, 100) + "..." : description }</p>
     </div>
 </a>

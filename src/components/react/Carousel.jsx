@@ -12,8 +12,9 @@ const Carousel = ({repo, imgs}) => {
                             <path d="m3.86 8.753 5.482 4.796c.646.566 1.658.106 1.658-.753V3.204a1 1 0 0 0-1.659-.753l-5.48 4.796a1 1 0 0 0 0 1.506z"/>
                         </svg>
                     </button>
-                    <a href={`${ repo }`} className="h-110 flex items-center">
+                    <a style={{ height: "60vh", width: "55vw" }} href={`${ repo }`} className="rounded-lg bg-blue-100 flex items-center justify-center">
                         <img
+                            style={{ maxHeight: "60vh" }}
                             className="rounded-lg"
                             src={`/images/${ imgs[idx] }`}
                             alt=""
@@ -29,7 +30,7 @@ const Carousel = ({repo, imgs}) => {
                     {
                         imgs
                         .map((_, i) =>
-                            <a onClick={() => setIdx(i)} className={`h-4 w-4 rounded-xl border-solid border-1 border-blue-500 ${i == idx ? "bg-blue-500" : ""} hover:cursor-pointer`}></a>
+                            <a key={i} onClick={() => setIdx(i)} className={`h-4 w-4 rounded-xl border-solid border-1 border-blue-500 ${i == idx ? "bg-blue-500" : ""} hover:cursor-pointer`}></a>
                         )
                     }
                 </div>

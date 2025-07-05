@@ -5,11 +5,13 @@ import Layout from "../layouts/Layout.astro";
 import ProjectCard from "../components/ProjectCard.astro";
 import Skills from "../components/Skills.astro";
 import type { CardIndexProps } from "../interfaces/Interface";
+
+const f = false;
 ---
 <Layout title="Jose Bautista - Inicio" page={0}>
     <div class="my-32 mx-48 flex">
 		<div class="flex-col">
-			<p class="text-4xl">Hola! soy <span class="underline font-extrabold text-blue-500">Jose Bautista.</span> Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, repellendus.</p>
+			<p class="text-4xl">Hola! soy <span class="underline font-extrabold text-blue-500">Jose Bautista.</span> Aqui puedes ver en que estoy trabajando. Me esfuerzo por crear soluciones combinando funcionalidad, dise;o y pasion por la tecnologia.</p>
 			<div style="align-self:start;" class="my-8 flex ml-2" id="links">
 				<a href="https://github.com/josejosepreso" class="mr-2 rounded-lg p-2 bg-black text-white">
 					<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="bi bi-github" viewBox="0 0 16 16">
@@ -23,15 +25,18 @@ import type { CardIndexProps } from "../interfaces/Interface";
 				</a>
 			</div>
       	</div>
-		<img src="/images/me.jpg" id="me" class="shadow-lg" />
+		<!-- <img src="/images/me.jpg" id="me" class="shadow-lg" /> -->
     </div>
 
 	{
-		indexCards.map((card: CardIndexProps) => 
-			<div class="shadow-lg p-12 rounded bg-gray-200 mx-32 mt-4">
-				<h1 class="underline text-blue-500 font-extrabold text-2xl">{ card.title }</h1>
-				<p class="text-black text-xl">{ card.description }</p>
-			</div>
+		f
+		&& (
+			indexCards.map((card: CardIndexProps) => 
+				<div class="shadow-lg p-12 rounded bg-gray-200 mx-32 mt-4">
+					<h1 class="underline text-blue-500 font-extrabold text-2xl">{ card.title }</h1>
+					<p class="text-black text-xl">{ card.description }</p>
+				</div>
+			)
 		)
 	}
 
@@ -49,6 +54,7 @@ import type { CardIndexProps } from "../interfaces/Interface";
 						description={ project.description }
 						img_path={ project.imgs[0] }
 						repository={ project.repository }
+						slug={ project.slug }
 					/>
 				)
 			}

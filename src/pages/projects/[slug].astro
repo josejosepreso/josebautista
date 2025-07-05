@@ -22,7 +22,10 @@ const { project } = Astro.props as Props;
 <Layout title={`Jose Bautista - ${project.name}`}>
     <div style="display:flex;flex-direction:column;justify-content:center;" class="shadow-lg rounded-lg mx-32 bg-gray-200 mt-8 p-8">
         <a href={`${project.repository}`} class="text-blue-500 text-4xl font-extrabold underline ml-6 mb-4">{ project.name }</a>
-        <p class="text-black font-semibold text-xl bg-gray-100 p-1 rounded-lg ml-8 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis neque repellat ea. Et inventore fuga maiores quo nostrum? Consectetur porro cum ab cupiditate voluptatibus sunt sapiente commodi eaque, quo ex!</p>
+        {
+            project.description 
+            && <p class="text-black font-leading text-lg bg-gray-100 p-1 rounded-lg ml-8 mb-4">{ project.description }</p>
+        }
         <div class="mx-8 flex-col" style="display:flex;justify-content:center;">
             <Carousel repo={ project.repository } imgs={ project.imgs } client:load />
             <div class="flex justify-end mt-4">

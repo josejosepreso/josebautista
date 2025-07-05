@@ -4,8 +4,8 @@ export const skills: Skills = {
     Frontend: [
 		{ name: "Vue", level: 30 },
 		{ name: "Bootstrap", level: 30 },
-		{ name: "Angular", level: 30 },
-		{ name: "React", level: 40 },
+		{ name: "TailwindCSS", level: 30 },
+		{ name: "React", level: 60 },
     ],
     Backend: [
 		{ name: "Spring Boot", level: 60 },
@@ -15,26 +15,43 @@ export const skills: Skills = {
     DB: [
 		{ name: "Oracle", level: 30 },
 		{ name: "SQL Server", level: 30 },
-		{ name: "MySQL", level: 90 },	
+		{ name: "MySQL", level: 40 },	
     ]
 };
 
 export const projects: Project[] = [
 	{
+		slug: "ecommerce",
+		name: "Infraestructura e-commerce y analitica",
+		description: "Una empresa de comercio electronico en crecimiento busca una infraestructura escalable y robusta en la nube para gestionar sus operaciones de venta en linea. La plataforma debe soportar un alto volumen de transacciones, proporcionar una experiencia de usuario fluida a traves de un portal principal, permitir la gestion interna de productos y pedidos mediante un portal de backoffice, y ofrecer capacidades analiticas avanzadas sobre los datos de ventas para la toma de decisiones estrategicas.",
+		imgs: ["Arquitectura.png", "01.png", "02.png", "03.png", "04.png", "05.png", "06.png"].map(s => "ecommerce/" + s),
+		technologies: ["Terraform"],
+		repository: "https://github.com/josejosepreso/ecommerce_webapps"
+	},
+	{
+		slug: "farm",
+		name: "Sistema de granja",
+		description: "",
+		imgs: ["farm0.png"],
+		technologies: ["React", "Tailwind", "SQL Server", "Express"],
+		repository: "https://github.com/josejosepreso/ProyectoIngenieria-fe"
+	},
+
+	{
 		slug: "etl",
 		name: "ETL",
-		description: "Aplicacion de escritorio para realizar operaciones ETL",
+		description: "Aplicacion de escritorio para realizar operaciones ETL sobre una base de datos Oracle",
 		imgs: ["etl0.png", "etl1.png", "etl2.png", "etl3.png"],
 		technologies: ["Python", "GTK3", "Oracle"],
 		repository: "https://github.com/josejosepreso/ETL"
 	},
 	{
-		slug: "linkedin",
-		name: "LinkedIn",
-		description: "Clon funcional de LinkedIn",
-		imgs: ["linkedin0.png", "linkedin1.png"],
-		technologies: ["HTML", "Bootstrap", "JavaScript", "Java"],
-		repository: "https://github.com/josejosepreso/LinkedIn"
+		slug: "radar",
+		name: "radar",
+		description: "Herramienta para la creacion de diagramas de ara;a (radar charts)",
+		imgs: ["radar0.png"],
+		technologies: ["Haskell", "Gloss"],
+		repository: "https://github.com/josejosepreso/radar"
 	},
 	{
 		slug: "pizza",
@@ -45,13 +62,13 @@ export const projects: Project[] = [
 		repository: "https://github.com/josejosepreso/ThePizzaLab-Front"
 	},
 	{
-		slug: "radar",
-		name: "radar",
-		description: "Herramienta para la creacion de diagramas de ara;a (radar charts)",
-		imgs: ["radar0.png"],
-		technologies: ["Haskell", "Gloss"],
-		repository: "https://github.com/josejosepreso/radar"
-	},
+		slug: "linkedin",
+		name: "Clon de LinkedIn",
+		description: "Clon funcional de LinkedIn",
+		imgs: ["linkedin0.png", "linkedin1.png"],
+		technologies: ["HTML", "Bootstrap", "JavaScript", "Java"],
+		repository: "https://github.com/josejosepreso/LinkedIn"
+	}
 ]
 
 export const indexCards: CardIndexProps[] = [
