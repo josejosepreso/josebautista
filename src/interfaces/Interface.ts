@@ -7,13 +7,18 @@ export interface Skills {
     [category: string]: Skill[];
 }
 
+interface Link {
+    title: string,
+    url: string
+}
+
 export interface Project {
     slug: string;
     name: string;
     description: string;
     imgs: string[];
     technologies: string[];
-    repository: string;
+    links: Link[];
 }
 
 export interface CardIndexProps {
