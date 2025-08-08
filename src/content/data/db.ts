@@ -29,11 +29,11 @@ export const projects: Project[] = [
 		links: [
 			{
 				title: "UI desplegada en Azure",
-				url: "ui-pokequeuejrbc-dev.azurewebsites.net"
+				url: "https://ui-pokequeuejrbc-dev.azurewebsites.net"
 			},
 			{
 				title: "API desplegada en Azure",
-				url: "api-pokequeuejrbc-dev.azurewebsites.net"
+				url: "https://api-pokequeuejrbc-dev.azurewebsites.net"
 			},			
 			{
 				title: "Repositorio de terraform",
