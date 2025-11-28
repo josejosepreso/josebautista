@@ -18,6 +18,7 @@ const { name, description, img_path, repository, slug } = Astro.props as Props;
         alt=""
         width={-1}
         height={-1}
+	style={{ width: "100%", maxHeight: "40vh" }}
     />
     <div class="mt-1 p-6 bg-gray-300 justify-items-center align-bottom text-blue-800 rounded-lg">
         <h3 class="font-extrabold mb-4 text-4xl">{ name }</h3>

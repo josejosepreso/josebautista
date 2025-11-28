@@ -15,14 +15,30 @@ export const skills: Skills = {
     DB: [
 		{ name: "Oracle", level: 30 },
 		{ name: "SQL Server", level: 30 },
-		{ name: "MySQL", level: 40 },	
+		{ name: "MySQL", level: 40 },
     ]
 };
 
 export const projects: Project[] = [
 	{
+		slug: "farm",
+		name: "Sistema administrativo de granja",
+		description: "",
+		imgs: ["farm0.png"],
+		technologies: ["React", "Tailwind", "SQL Server", "Express"],
+		links: [{ title:"Repositorio de github", url:"https://github.com/josejosepreso/ProyectoIngenieria-fe" }]
+	},
+	{
+		slug: "pizza",
+		name: "ThePizzaLab",
+		description: "Aplicativo para un restaurante. Implementacion backoffice y frontoffice para la administracion y acceso a los clientes del sistema.",
+		imgs: ["pizza0.png"],
+		technologies: ["Laravel", "SpringBoot", "MySQL", "Bootstrap"],
+		links: [{ title:"Repositorio frontend", url:"https://github.com/josejosepreso/ThePizzaLab-Front" }, { title:"Repositorio backend", url:"https://github.com/lester1508/Restaurante_backend" }]
+	},
+	{
 		slug: "pokeapi",
-		name: "Evolucion del Generador de Reportes V1",
+		name: "PokeAPI - Generador de reportes",
 		description: "Este proyecto consiste en la mejora y extension de una aplicacion web existente llamada Generador de Reportes, disenada para crear archivos CSV a partir de datos obtenidos desde una API externa (PokeAPI). La aplicacion se ejecuta integramente en la nube de Azure, integrando un frontend moderno, un backend robusto, procesos asincronos y almacenamiento seguro. El objetivo de esta evolucion fue anadir nuevas funcionalidades, optimizar la experiencia de usuario y mantener la disponibilidad del sistema en un entorno productivo.",
 		technologies: ["Terraform", "FastAPI", "SQL Server", "NextJS", "Python"],
 		imgs: ["pokeapi.png", "02.png"].map(s => "pokeapi/" + s),
@@ -34,7 +50,7 @@ export const projects: Project[] = [
 			{
 				title: "API desplegada en Azure",
 				url: "https://api-pokequeuejrbc-dev.azurewebsites.net"
-			},			
+			},
 			{
 				title: "Repositorio de terraform",
 				url: "https://github.com/josejosepreso/poke.queue.terraform"
@@ -58,12 +74,20 @@ export const projects: Project[] = [
 		]
 	},
 	{
-		slug: "api_redis_cache",
-		name: "Implementacion de API con Redis cache",
-		description: "Este proyecto consiste en el desarrollo de una solución backend integral, cuyo objetivo es demostrar la capacidad de construir un pipeline completo de datos en la nube, implementar una API REST segura y optimizada, e integrar mecanismos avanzados como caching dinámico y monitoreo de rendimiento en un entorno de producción.La solución aborda todas las fases esenciales de una arquitectura moderna de servicios en la nube, desde la migración de datos hasta el despliegue automatizado con contenedores.",
-		imgs: ["diagram.png", "01.png", "02.png", "03.png", "3.5.png", "04.png"].map(s => "api_redis/" + s),
-		technologies: ["FastAPI", "Terraform","SQL Server", "Docker"],
-		links: [{ title:"Repositorio de github", url:"https://github.com/josejosepreso/api_redis_cache" }]
+		slug: "vids",
+		name: "Sistema de registro de videos",
+		description: "",
+		imgs: ["poo.png"],
+		technologies: ["HTML", "CSS", "JavaScript", "Java"],
+		links: [{title: "Repositorio de github", url: "https://github.com/josejosepreso/VidsRegister"}]
+	},
+	{
+		slug: "spotty",
+		name: "Spotty",
+		description: "",
+		imgs: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg", "07.jpg", "08.jpg", "09.jpg"].map(s => "spotty/" + s),
+		technologies: ["React Native"],
+		links: [{ title:"Repositorio de github", url:"https://github.com/josejosepreso/Frontend_Spotty" }]
 	},
 	{
 		slug: "ecommerce",
@@ -74,20 +98,20 @@ export const projects: Project[] = [
 		links: [{ title:"Repositorio de github", url:"https://github.com/josejosepreso/ecommerce_webapps" }]
 	},
 	{
+		slug: "api_redis_cache",
+		name: "Implementacion de API con Redis cache",
+		description: "Este proyecto consiste en el desarrollo de una solución backend integral, cuyo objetivo es demostrar la capacidad de construir un pipeline completo de datos en la nube, implementar una API REST segura y optimizada, e integrar mecanismos avanzados como caching dinámico y monitoreo de rendimiento en un entorno de producción.La solución aborda todas las fases esenciales de una arquitectura moderna de servicios en la nube, desde la migración de datos hasta el despliegue automatizado con contenedores.",
+		imgs: ["diagram.png", "01.png", "02.png", "03.png", "3.5.png", "04.png"].map(s => "api_redis/" + s),
+		technologies: ["FastAPI", "Terraform","SQL Server", "Docker"],
+		links: [{ title:"Repositorio de github", url:"https://github.com/josejosepreso/api_redis_cache" }]
+	},
+	{
 		slug: "etl",
 		name: "ETL",
 		description: "Aplicacion de escritorio para realizar operaciones ETL sobre una base de datos Oracle",
 		imgs: ["etl0.png", "etl1.png", "etl2.png", "etl3.png"],
 		technologies: ["Python", "GTK3", "Oracle"],
 		links: [{ title:"Repositorio de github", url:"https://github.com/josejosepreso/ETL" }]
-	},
-	{
-		slug: "farm",
-		name: "Sistema de granja",
-		description: "",
-		imgs: ["farm0.png"],
-		technologies: ["React", "Tailwind", "SQL Server", "Express"],
-		links: [{ title:"Repositorio de github", url:"https://github.com/josejosepreso/ProyectoIngenieria-fe" }]
 	},
 	{
 		slug: "radar",
@@ -98,20 +122,20 @@ export const projects: Project[] = [
 		links: [{ title:"Repositorio de github", url:"https://github.com/josejosepreso/radar" }]
 	},
 	{
-		slug: "pizza",
-		name: "ThePizzaLab",
-		description: "Sistema de un restaurante",
-		imgs: ["pizza0.png"],
-		technologies: ["Laravel", "Java", "MySQL", "Bootstrap"],
-		links: [{ title:"Repositorio de github", url:"https://github.com/josejosepreso/ThePizzaLab-Front" }]
-	},
-	{
 		slug: "linkedin",
 		name: "Clon de LinkedIn",
 		description: "Clon funcional de LinkedIn",
 		imgs: ["linkedin0.png", "linkedin1.png"],
-		technologies: ["HTML", "Bootstrap", "JavaScript", "Java"],
+		technologies: ["HTML", "Bootstrap", "JavaScript", "JSP"],
 		links: [{ title:"Repositorio de github", url: "https://github.com/josejosepreso/LinkedIn" }]
+	},
+	{
+		slug: "art",
+		name: "Art gallery",
+		description: "",
+		imgs: ["art.png", "art0.png"],
+		technologies: ["HTML", "CSS", "Python", "Docker"],
+		links: [{ title:"Repositorio de github", url: "https://github.com/josejosepreso/art_gallery" }, { title:"Aplicativo desplegado en render", url: "https://art-gallery-hz02.onrender.com/" }]
 	}
 ]
 
