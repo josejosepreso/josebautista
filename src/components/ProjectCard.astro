@@ -1,14 +1,8 @@
 ---
 import { Image } from "astro:assets";
-interface Props {
-    name: string;
-    description: string;
-    img_path: string;
-    repository: string;
-    slug: string;
-}
+import type { ProjectCardProps } from "../interfaces/Interface";
 
-const { name, description, img_path, repository, slug } = Astro.props as Props;
+const { name, description, img_path, repository, slug } = Astro.props as ProjectCardProps;
 
 ---
 <a class="home-project flex-col bg-gray-200 mr-4 mb-4" href={`/projects/${ slug }`}>

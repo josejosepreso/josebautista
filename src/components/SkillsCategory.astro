@@ -1,10 +1,7 @@
 ---
-import type { Skill } from "../interfaces/Interface";
-interface Props {
-    category: string;
-    skills: Skill[];
-}
-const { category, skills } = Astro.props as Props;
+import type { Skill, SkillsCategoryProps } from "../interfaces/Interface";
+
+const { category, skills } = Astro.props as SkillsCategoryProps;
 ---
 <div class="mt-4 mx-4 rounded text-2xl p-6 bg-gray-300">
     <h2 class="underline text-2xl font-extrabold text-blue-700">{ category }</h2>
