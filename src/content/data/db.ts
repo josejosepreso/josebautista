@@ -13,7 +13,8 @@ export const skills: Skills = {
 		{ name: "NodeJS", level: 50 },
     ],
     DB: [
-		{ name: "Oracle", level: 30 },
+		{ name: "Oracle", level: 40 },
+		{ name: "Postgres", level: 40 },
 		{ name: "SQL Server", level: 30 },
 		{ name: "MySQL", level: 40 },
     ]
@@ -23,10 +24,15 @@ export const projects: Project[] = [
 	{
 		slug: "farm",
 		name: "Sistema administrativo de granja",
-		description: "",
+		description: "Implementacion backoffice de un sistema para una granja. Incluyendo modulos de inventario, ventas, gestion de usuarios, pedidos, compras de insumos, etc.",
 		imgs: ["farm0.png"],
 		technologies: ["React", "Tailwind", "SQL Server", "Express"],
-		links: [{ title:"Repositorio de github", url:"https://github.com/josejosepreso/ProyectoIngenieria-fe" }]
+		links: [
+			{
+				title:"Repositorio de github",
+				url:"https://github.com/josejosepreso/ProyectoIngenieria-fe" 
+			}
+		]
 	},
 	{
 		slug: "pizza",
@@ -34,7 +40,16 @@ export const projects: Project[] = [
 		description: "Aplicativo para un restaurante. Implementacion backoffice y frontoffice para la administracion y acceso a los clientes del sistema.",
 		imgs: ["pizza0.png"],
 		technologies: ["Laravel", "SpringBoot", "MySQL", "Bootstrap"],
-		links: [{ title:"Repositorio frontend", url:"https://github.com/josejosepreso/ThePizzaLab-Front" }, { title:"Repositorio backend", url:"https://github.com/lester1508/Restaurante_backend" }]
+		links: [
+			{
+				title:"Repositorio frontend",
+				url:"https://github.com/josejosepreso/ThePizzaLab-Front" 
+			}, 
+			{
+				title:"Repositorio backend",
+				url:"https://github.com/lester1508/Restaurante_backend" 
+			}
+		]
 	},
 	{
 		slug: "pokeapi",
@@ -79,7 +94,12 @@ export const projects: Project[] = [
 		description: "",
 		imgs: ["poo.png"],
 		technologies: ["HTML", "CSS", "JavaScript", "Java"],
-		links: [{title: "Repositorio de github", url: "https://github.com/josejosepreso/VidsRegister"}]
+		links: [
+			{
+				title: "Repositorio de github",
+				url: "https://github.com/josejosepreso/VidsRegister"
+			}
+		]
 	},
 	{
 		slug: "spotty",
@@ -87,7 +107,12 @@ export const projects: Project[] = [
 		description: "",
 		imgs: ["01.jpg", "02.jpg", "03.jpg", "04.jpg", "05.jpg", "06.jpg", "07.jpg", "08.jpg", "09.jpg"].map(s => "spotty/" + s),
 		technologies: ["React Native"],
-		links: [{ title:"Repositorio de github", url:"https://github.com/josejosepreso/Frontend_Spotty" }]
+		links: [
+			{
+				title:"Repositorio de github",
+				url:"https://github.com/josejosepreso/Frontend_Spotty"
+			}
+		]
 	},
 	{
 		slug: "ecommerce",
@@ -95,7 +120,12 @@ export const projects: Project[] = [
 		description: "Una empresa de comercio electronico en crecimiento busca una infraestructura escalable y robusta en la nube para gestionar sus operaciones de venta en linea. La plataforma debe soportar un alto volumen de transacciones, proporcionar una experiencia de usuario fluida a traves de un portal principal, permitir la gestion interna de productos y pedidos mediante un portal de backoffice, y ofrecer capacidades analiticas avanzadas sobre los datos de ventas para la toma de decisiones estrategicas.",
 		imgs: ["Arquitectura.png", "01.png", "02.png", "03.png", "04.png", "05.png", "06.png"].map(s => "ecommerce/" + s),
 		technologies: ["Terraform"],
-		links: [{ title:"Repositorio de github", url:"https://github.com/josejosepreso/ecommerce_webapps" }]
+		links: [
+			{
+				title:"Repositorio de github",
+				url:"https://github.com/josejosepreso/ecommerce_webapps" 
+			}
+		]
 	},
 	{
 		slug: "api_redis_cache",
@@ -103,7 +133,12 @@ export const projects: Project[] = [
 		description: "Este proyecto consiste en el desarrollo de una solución backend integral, cuyo objetivo es demostrar la capacidad de construir un pipeline completo de datos en la nube, implementar una API REST segura y optimizada, e integrar mecanismos avanzados como caching dinámico y monitoreo de rendimiento en un entorno de producción.La solución aborda todas las fases esenciales de una arquitectura moderna de servicios en la nube, desde la migración de datos hasta el despliegue automatizado con contenedores.",
 		imgs: ["diagram.png", "01.png", "02.png", "03.png", "3.5.png", "04.png"].map(s => "api_redis/" + s),
 		technologies: ["FastAPI", "Terraform","SQL Server", "Docker"],
-		links: [{ title:"Repositorio de github", url:"https://github.com/josejosepreso/api_redis_cache" }]
+		links: [
+			{
+				title:"Repositorio de github",
+				url:"https://github.com/josejosepreso/api_redis_cache" 
+			}
+		]
 	},
 	{
 		slug: "etl",
@@ -111,7 +146,12 @@ export const projects: Project[] = [
 		description: "Aplicacion de escritorio para realizar operaciones ETL sobre una base de datos Oracle",
 		imgs: ["etl0.png", "etl1.png", "etl2.png", "etl3.png"],
 		technologies: ["Python", "GTK3", "Oracle"],
-		links: [{ title:"Repositorio de github", url:"https://github.com/josejosepreso/ETL" }]
+		links: [
+			{
+				title:"Repositorio de github",
+				url:"https://github.com/josejosepreso/ETL" 
+			}
+		]
 	},
 	{
 		slug: "radar",
@@ -119,7 +159,12 @@ export const projects: Project[] = [
 		description: "Herramienta para la creacion de diagramas de ara;a (radar charts)",
 		imgs: ["radar0.png"],
 		technologies: ["Haskell", "Gloss"],
-		links: [{ title:"Repositorio de github", url:"https://github.com/josejosepreso/radar" }]
+		links: [
+			{
+				title:"Repositorio de github",
+				url:"https://github.com/josejosepreso/radar" 
+			}
+		]
 	},
 	{
 		slug: "linkedin",
@@ -127,7 +172,12 @@ export const projects: Project[] = [
 		description: "Clon funcional de LinkedIn",
 		imgs: ["linkedin0.png", "linkedin1.png"],
 		technologies: ["HTML", "Bootstrap", "JavaScript", "JSP"],
-		links: [{ title:"Repositorio de github", url: "https://github.com/josejosepreso/LinkedIn" }]
+		links: [
+			{
+				title:"Repositorio de github",
+				url: "https://github.com/josejosepreso/LinkedIn" 
+			}
+		]
 	},
 	{
 		slug: "art",
@@ -135,7 +185,29 @@ export const projects: Project[] = [
 		description: "",
 		imgs: ["art.png", "art0.png"],
 		technologies: ["HTML", "CSS", "Python", "Docker"],
-		links: [{ title:"Repositorio de github", url: "https://github.com/josejosepreso/art_gallery" }, { title:"Aplicativo desplegado en render", url: "https://art-gallery-hz02.onrender.com/" }]
+		links: [
+			{
+				title:"Repositorio de github",
+				url: "https://github.com/josejosepreso/art_gallery"
+			},
+			{
+				title:"Aplicativo desplegado en render",
+				url: "https://art-gallery-hz02.onrender.com/"
+			}
+		]
+	},
+	{
+		slug: "snake",
+		name: "Snake Game",
+		description: "SDL2 snake game.",
+		imgs: [""],
+		technologies: ["C", "SDL"],
+		links: [
+			{
+				title:"Repositorio de github",
+				url: "https://github.com/josejosepreso/snake"
+			},
+		]
 	}
 ]
 
