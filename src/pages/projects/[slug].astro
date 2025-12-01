@@ -23,11 +23,18 @@ const { project } = Astro.props as Props;
     <div style="display:flex;flex-direction:column;justify-content:center;" class="shadow-lg rounded-lg mx-32 bg-gray-200 mt-8 p-8">
         <a href="#" class="text-blue-500 text-4xl font-extrabold underline ml-6 mb-4">{ project.name }</a>
         {
-            project.description 
-            && <p class="text-black font-leading text-lg bg-gray-100 p-1 rounded-lg ml-8 mb-4">{ project.description }</p>
+            project.description && (
+                <p class="text-black font-leading text-lg bg-gray-100 p-1 rounded-lg ml-8 mb-4">
+                    { project.description }
+                </p>
+            )
         }
         <div class="mx-8 flex-col" style="display:flex;justify-content:center;">
-            <Carousel repo={ "#" } imgs={ project.imgs } client:load />
+            <Carousel
+                repo={ "#" }
+                imgs={ project.imgs }
+                client:load
+            />
             <div class="flex flex-col">
                 <span class="font-extrabold text-blue-600 text-lg">Enlaces</span>
                 <div class="ml-4 flex flex-col">
@@ -45,9 +52,9 @@ const { project } = Astro.props as Props;
             </div>
             <div class="flex justify-end mt-4">
                 {
-                    project.technologies.map(technolgy =>
+                    project.technologies.map(technolgy => (
                         <TecnologyLabel name={ technolgy } />
-                    )
+                    ))
                 }
             </div>
         </div>
